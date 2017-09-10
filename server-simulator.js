@@ -25,7 +25,7 @@ io.on('connection', function (socket) {
 
 
 function sendCommand(command, socketId, cb) {
-    sockets[socketId].emit('rpt-command', {key: 'value'}, function (data) {
+    sockets[socketId].emit('rpt-command', {cmd: 'rpt stats 21301'}, function (data) {
         console.log('response', data);
         if(_.isFunction(cb)) cb();
     });
