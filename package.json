@@ -1,0 +1,25 @@
+{
+  "name": "rpt-cmd",
+  "version": "1.0.0",
+  "description": "Remote command interface for Asterisk servers running app_rpt.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richdunajewski/rpt-cmd.git"
+  },
+  "keywords": [
+    "app_rpt",
+    "asterisk",
+    "node.js",
+    "websocket"
+  ],
+  "author": "Rich Dunajewski <me@richdunajewski.com> (https://richdunajewski.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/richdunajewski/rpt-cmd/issues"
+  },
+  "homepage": "https://github.com/richdunajewski/rpt-cmd#readme"
+}
