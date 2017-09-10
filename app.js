@@ -3,12 +3,10 @@
 var io = require('socket.io-client');
 var exec = require('child_process').exec;
 
-var socket = io('http://localhost:4000');
+var socket = io('http://hamilton.richdunajewski.com:4000?node=21301');
 
 socket.on('connect', function () {
     console.log('Connected', socket.id);
-
-
 });
 
 socket.on('disconnect', function (reason) {
@@ -21,8 +19,8 @@ socket.on('rpt-command', function (data, cb) {
     exec('asterisk -rx "' + data.cmd + '"', function (err, stdout, stderr) {
         if (err) console.error(err);
 
-        console.log(stdout);
-        console.log(stderr);
+        if (stdout) console.log(stdout);
+        if (stderr) console.log(stderr);
 
         cb({msg: stdout});
     });

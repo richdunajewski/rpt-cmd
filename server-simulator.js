@@ -29,6 +29,4 @@ function sendCommand(command, socketId, cb) {
         console.log('response', data);
         if(_.isFunction(cb)) cb();
     });
-
-
 }
