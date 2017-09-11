@@ -52,7 +52,7 @@ socket.on('raw-command', function (data, cb) {
 
     //sanity check what they're sending us to prevent attacks
     var whitelist = ['reboot'];
-    if (whitelist.indexOf(cmd) === -1) {
+    if (whitelist.indexOf(data.cmd) === -1) {
         cb({msg: 'Raw command was not in the whitelist. Ignoring...'})
     } else {
         exec(data.cmd, function (err, stdout, stderr) {
