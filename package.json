@@ -24,6 +24,7 @@
   "homepage": "https://github.com/richdunajewski/rpt-cmd#readme",
   "dependencies": {
     "async": "^2.5.0",
+    "commander": "^2.11.0",
     "express": "^4.15.4",
     "lodash": "^4.17.4",
     "socket.io": "^2.0.3",
